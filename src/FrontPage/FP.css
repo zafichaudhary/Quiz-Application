@@ -1,0 +1,144 @@
+body {
+  margin: 0;
+  font-family: "Be Vietnam Pro", sans-serif;
+  background: linear-gradient(62deg, #95e9e3 30%, #1fbed2 41%, #0b2632 85%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game {
+  width: 900px;
+  max-width: 100%;
+  min-height: 500px;
+  display: flex;
+  background: rgba(0, 0, 0, 0.65);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.7);
+}
+
+/* LEFT PANEL */
+.intro {
+  width: 40%;
+  color: #fff;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.intro h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.intro p {
+  margin: 6px 0;
+}
+
+/* PROGRESS */
+.progress {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #ccc;
+}
+
+.dot.done {
+  background: green;
+}
+
+.dot.active {
+  background: orange;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.3; }
+  100% { opacity: 1; }
+}
+
+/* RIGHT PANEL */
+.game-area {
+  width: 60%;
+  background: #fff;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+}
+
+/* QUESTION */
+.question {
+  width: 100%;
+}
+
+.question-text {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.question-answers {
+  list-style: none;
+  padding: 0;
+}
+
+.question-answers li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.question-answers input {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.question-answers label {
+  cursor: pointer;
+  color: #333;
+}
+
+/* BUTTON */
+.question-button {
+  margin-top: 20px;
+  padding: 10px 22px;
+  background-color: #1f8197;
+  border: none;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.question-button:hover {
+  background-color: #156d80;
+}
+
+/* FINISH */
+.quiz-finished {
+  font-size: 26px;
+  color: #1f8197;
+  text-align: center;
+}
+
+.restart-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: transparent;
+  border: 1px solid #00e5ff;
+  color: #00e5ff;
+  border-radius: 6px;
+  cursor: pointer;
+}
